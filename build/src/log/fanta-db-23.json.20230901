@@ -1,0 +1,5 @@
+{"datetime": "2023-09-01 15:34:46.667054", "level": "INFO", "source": "__init__.py", "line": 25, "msg": "Logger setup completed", "additional_detail": null}
+{"datetime": "2023-09-01 15:35:07.866714", "level": "INFO", "source": "__init__.py", "line": 25, "msg": "Logger setup completed", "additional_detail": null}
+{"datetime": "2023-09-01 15:35:07.866714", "level": "INFO", "source": "__init__.py", "line": 30, "msg": "Application fanta-db-23 started with execution id fanta-db-23-YYYYMMDDHHmmss", "additional_detail": null}
+{"datetime": "2023-09-01 15:35:45.001277", "level": "INFO", "source": "__init__.py", "line": 25, "msg": "Logger setup completed", "additional_detail": null}
+{"datetime": "2023-09-01 15:35:45.002405", "level": "INFO", "source": "__init__.py", "line": 30, "msg": "Application fanta-db-23 started with execution id fanta-db-23-20230901153545", "additional_detail": null}
