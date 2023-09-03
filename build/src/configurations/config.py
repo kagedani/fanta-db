@@ -1,5 +1,6 @@
 import os
 
+
 class BaseConfig(object):
     ENV = "default"
     APP_NAME = "fanta-db-23"
