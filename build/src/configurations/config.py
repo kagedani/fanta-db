@@ -15,7 +15,7 @@ class BaseConfig(object):
         "2021": "15"
     }
     USERNAME = "Aldone95"
-    PSW = "*******"
+    PSW = "karnezis"
     LOG_CONFIG = {
         "default": {
             "file_level": "INFO",

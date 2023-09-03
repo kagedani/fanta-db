@@ -12,7 +12,7 @@ def from_download_to_players_stats(sql_records, season):
                           team=record.get("Squadra"),
                           number_of_game_with_vote=record.get("Pv"),
                           average_vote=record.get("Mv"),
-                          average_fanta_vote=record.get("Mf"),
+                          average_fanta_vote= record.get("Mf") if season <= "2122" else record.get("Fm"),
                           goal_made=record.get("Gf"),
                           goal_taken=record.get("Gs"),
                           penalty_saved=record.get("Rp"),
