@@ -1,3 +1,5 @@
+import os
+
 class BaseConfig(object):
     ENV = "default"
     APP_NAME = "fanta-db-23"
@@ -14,8 +16,8 @@ class BaseConfig(object):
         "2122": "16",
         "2021": "15"
     }
-    USERNAME = "Aldone95"
-    PSW = "karnezis"
+    USERNAME = os.getenv("FANTA_USERNAME") or "default"
+    PSW = os.getenv("FANTA_PSW") or "default"
     LOG_CONFIG = {
         "default": {
             "file_level": "INFO",

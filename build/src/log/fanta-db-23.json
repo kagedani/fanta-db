@@ -25,3 +25,41 @@
 {"datetime": "2023-09-03 13:59:17.577136", "level": "INFO", "source": "main.py", "line": 28, "msg": "Sending request to https://www.fantacalcio.it/api/v1/Excel/stats/15/1 to download season 2021", "additional_detail": null}
 {"datetime": "2023-09-03 13:59:18.036055", "level": "INFO", "source": "main.py", "line": 42, "msg": "Bulk load for season 2021", "additional_detail": null}
 {"datetime": "2023-09-03 13:59:18.146520", "level": "INFO", "source": "main.py", "line": 44, "msg": "Bulk load for season 2021 - COMPLETED", "additional_detail": null}
+{"datetime": "2023-09-03 14:10:41.517074", "level": "INFO", "source": "__init__.py", "line": 29, "msg": "Logger setup completed", "additional_detail": null}
+{"datetime": "2023-09-03 14:10:41.517074", "level": "INFO", "source": "__init__.py", "line": 34, "msg": "Application fanta-db-23 started with execution id fanta-db-23-20230903141041", "additional_detail": null}
+{"datetime": "2023-09-03 14:10:41.517074", "level": "INFO", "source": "__init__.py", "line": 38, "msg": "Setting up the database postgresql+psycopg2://fanta_db_username:fanta_db_password@localhost/fanta_db", "additional_detail": null}
+{"datetime": "2023-09-03 14:10:41.517074", "level": "INFO", "source": "__init__.py", "line": 40, "msg": "Setting up the session maker: started", "additional_detail": null}
+{"datetime": "2023-09-03 14:10:41.517074", "level": "INFO", "source": "__init__.py", "line": 42, "msg": "Setting up the session maker: done", "additional_detail": null}
+{"datetime": "2023-09-03 14:10:41.556097", "level": "INFO", "source": "__init__.py", "line": 47, "msg": "Database already exists", "additional_detail": null}
+{"datetime": "2023-09-03 14:10:41.630623", "level": "INFO", "source": "main.py", "line": 16, "msg": "Sending request to https://www.fantacalcio.it/api/v1/User/login with body {username: \"Aldone95\", password: \"karnezis\"} and headers {'Content-Type': 'application/json'}", "additional_detail": null}
+{"datetime": "2023-09-03 14:10:42.024060", "level": "INFO", "source": "main.py", "line": 28, "msg": "Sending request to https://www.fantacalcio.it/api/v1/Excel/stats/18/1 to download season 2324", "additional_detail": null}
+{"datetime": "2023-09-03 14:10:42.616016", "level": "INFO", "source": "main.py", "line": 42, "msg": "Bulk load for season 2324", "additional_detail": null}
+{"datetime": "2023-09-03 14:10:42.695196", "level": "INFO", "source": "main.py", "line": 44, "msg": "Bulk load for season 2324 - COMPLETED", "additional_detail": null}
+{"datetime": "2023-09-03 14:10:42.695196", "level": "INFO", "source": "main.py", "line": 28, "msg": "Sending request to https://www.fantacalcio.it/api/v1/Excel/stats/17/1 to download season 2223", "additional_detail": null}
+{"datetime": "2023-09-03 14:10:43.250931", "level": "INFO", "source": "main.py", "line": 42, "msg": "Bulk load for season 2223", "additional_detail": null}
+{"datetime": "2023-09-03 14:10:43.347196", "level": "INFO", "source": "main.py", "line": 44, "msg": "Bulk load for season 2223 - COMPLETED", "additional_detail": null}
+{"datetime": "2023-09-03 14:10:43.347196", "level": "INFO", "source": "main.py", "line": 28, "msg": "Sending request to https://www.fantacalcio.it/api/v1/Excel/stats/16/1 to download season 2122", "additional_detail": null}
+{"datetime": "2023-09-03 14:10:43.821124", "level": "INFO", "source": "main.py", "line": 42, "msg": "Bulk load for season 2122", "additional_detail": null}
+{"datetime": "2023-09-03 14:10:43.931013", "level": "INFO", "source": "main.py", "line": 44, "msg": "Bulk load for season 2122 - COMPLETED", "additional_detail": null}
+{"datetime": "2023-09-03 14:10:43.931013", "level": "INFO", "source": "main.py", "line": 28, "msg": "Sending request to https://www.fantacalcio.it/api/v1/Excel/stats/15/1 to download season 2021", "additional_detail": null}
+{"datetime": "2023-09-03 14:10:44.403413", "level": "INFO", "source": "main.py", "line": 42, "msg": "Bulk load for season 2021", "additional_detail": null}
+{"datetime": "2023-09-03 14:10:44.515899", "level": "INFO", "source": "main.py", "line": 44, "msg": "Bulk load for season 2021 - COMPLETED", "additional_detail": null}
+{"datetime": "2023-09-03 14:16:58.017464", "level": "INFO", "source": "__init__.py", "line": 29, "msg": "Logger setup completed", "additional_detail": null}
+{"datetime": "2023-09-03 14:16:58.017464", "level": "INFO", "source": "__init__.py", "line": 34, "msg": "Application fanta-db-23 started with execution id fanta-db-23-20230903141658", "additional_detail": null}
+{"datetime": "2023-09-03 14:16:58.017464", "level": "INFO", "source": "__init__.py", "line": 38, "msg": "Setting up the database postgresql+psycopg2://fanta_db_username:fanta_db_password@localhost/fanta_db", "additional_detail": null}
+{"datetime": "2023-09-03 14:16:58.019044", "level": "INFO", "source": "__init__.py", "line": 40, "msg": "Setting up the session maker: started", "additional_detail": null}
+{"datetime": "2023-09-03 14:16:58.019044", "level": "INFO", "source": "__init__.py", "line": 42, "msg": "Setting up the session maker: done", "additional_detail": null}
+{"datetime": "2023-09-03 14:16:58.048963", "level": "INFO", "source": "__init__.py", "line": 47, "msg": "Database already exists", "additional_detail": null}
+{"datetime": "2023-09-03 14:16:58.119660", "level": "INFO", "source": "main.py", "line": 16, "msg": "Sending request to https://www.fantacalcio.it/api/v1/User/login with body {username: \"Aldone95\", password: \"karnezis\"} and headers {'Content-Type': 'application/json'}", "additional_detail": null}
+{"datetime": "2023-09-03 14:16:58.380852", "level": "INFO", "source": "main.py", "line": 28, "msg": "Sending request to https://www.fantacalcio.it/api/v1/Excel/stats/18/1 to download season 2324", "additional_detail": null}
+{"datetime": "2023-09-03 14:16:59.065005", "level": "INFO", "source": "main.py", "line": 42, "msg": "Bulk load for season 2324", "additional_detail": null}
+{"datetime": "2023-09-03 14:16:59.145446", "level": "INFO", "source": "main.py", "line": 44, "msg": "Bulk load for season 2324 - COMPLETED", "additional_detail": null}
+{"datetime": "2023-09-03 14:16:59.145446", "level": "INFO", "source": "main.py", "line": 28, "msg": "Sending request to https://www.fantacalcio.it/api/v1/Excel/stats/17/1 to download season 2223", "additional_detail": null}
+{"datetime": "2023-09-03 14:16:59.734229", "level": "INFO", "source": "main.py", "line": 42, "msg": "Bulk load for season 2223", "additional_detail": null}
+{"datetime": "2023-09-03 14:16:59.829777", "level": "INFO", "source": "main.py", "line": 44, "msg": "Bulk load for season 2223 - COMPLETED", "additional_detail": null}
+{"datetime": "2023-09-03 14:16:59.829777", "level": "INFO", "source": "main.py", "line": 28, "msg": "Sending request to https://www.fantacalcio.it/api/v1/Excel/stats/16/1 to download season 2122", "additional_detail": null}
+{"datetime": "2023-09-03 14:17:00.304618", "level": "INFO", "source": "main.py", "line": 42, "msg": "Bulk load for season 2122", "additional_detail": null}
+{"datetime": "2023-09-03 14:17:00.428684", "level": "INFO", "source": "main.py", "line": 44, "msg": "Bulk load for season 2122 - COMPLETED", "additional_detail": null}
+{"datetime": "2023-09-03 14:17:00.428684", "level": "INFO", "source": "main.py", "line": 28, "msg": "Sending request to https://www.fantacalcio.it/api/v1/Excel/stats/15/1 to download season 2021", "additional_detail": null}
+{"datetime": "2023-09-03 14:17:00.997266", "level": "INFO", "source": "main.py", "line": 42, "msg": "Bulk load for season 2021", "additional_detail": null}
+{"datetime": "2023-09-03 14:17:01.102231", "level": "INFO", "source": "main.py", "line": 44, "msg": "Bulk load for season 2021 - COMPLETED", "additional_detail": null}
