@@ -1,0 +1,29 @@
+version: '3.7'
+
+services:
+
+  fanta-db-app:
+    build: 
+      context: ./../../
+      dockerfile: ./docker-compose/all/Dockerfile
+    command: python3 /app/main.py &
+    environment:
+      - DB_HOST=fanta_db
+      - FANTA_USERNAME=Aldone95
+      - FANTA_PSW=karnezis
+    container_name: dc-fanta-db-app
+  
+  fanta_db:
+    image: postgres:15.3-alpine
+    volumes:
+      - fanta_db_data:/var/lib/postgresql/data/
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=fanta_db_username
+      - POSTGRES_PASSWORD=fanta_db_password
+      - POSTGRES_DB=fanta_db
+    container_name: dc-fanta-db
+
+volumes:
+  fanta_db_data:
