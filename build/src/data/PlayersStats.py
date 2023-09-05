@@ -41,14 +41,3 @@ class PlayersStats(Base):
                 session.rollback()
                 logging.error(f"Error inserting {len(ps)} player stats")
                 raise e
-
-    def __str__(self):
-        request = {
-            'ticket_id': self.ticket_id,
-            'service': self.service,
-            'category': self.category,
-            'status': self.status,
-            'processor_id': self.processor_id
-        }
-        return request
-
