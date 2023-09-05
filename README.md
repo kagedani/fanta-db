@@ -20,12 +20,17 @@ Before you begin, ensure you have met the following requirements:
 * You have a `Windows/Linux` machine. On Mac this is not tested
 * You have an official account on [Leghe Fantacalcio](www.fantacalcio.it)
 
+Nevertheless, if you are not interested in getting your hands dirty into the app code, you can just launch everything as a docker compose file, so the only requirements needed in this case is:
+* [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/)
+
 ## Fanta db setup
 
 To start the setup you need to clone the repository: 
 ```
 git clone https://github.com/kagedani/fanta-db.git
 ```
+
+### Local Setup
 
 Open the source folder of the project using your favourite IDE (Visual Studio and Pycharm are my favourites).
 
@@ -34,6 +39,16 @@ Create the conda environment starting from the env file `env.yml` located in the
 conda env create -f env.yml -n <env-name>
 ```
 At this point the only thing you need is to create a configuration in your IDE to exploit the conda env created and define a couple of env vars (as described in the next section).
+
+### Docker compose setup 
+
+You need to do absolutely nothing except running
+
+```
+docker compose up -d
+```
+
+in the `docker-compose/all`. Then you can access the database that keeps running. 
 
 ## Using Fanta db
 
@@ -74,15 +89,16 @@ LOG_CONFIG = {
         "console_level": "DEBUG"
     }
 }
-SQLALCHEMY_DATABASE_URI = "postgresql+psycopg2://fanta_db_username:fanta_db_password@localhost/fanta_db"
+SQLALCHEMY_DATABASE_URI = f"postgresql+psycopg2://fanta_db_username:fanta_db_password@{os.getenv('DB_HOST')}/fanta_db"
 SESSION_MAKER = None
 ```
 
-As you can see, `FANTA_USERNAME` and `FANTA_PSW` are taken from the env, so to use the application you need to export these values as environments variables.
+As you can see, `DB_HOST`, `FANTA_USERNAME` and `FANTA_PSW` are taken from the env, so to use the application you need to export these values as environments variables.
+`DB_HOST` just need to be equal to 'localhost' if you prefer to run the app locally without exploit the docker compose complete file.
 
 ## Next features
 
-- [ ] Single docker compose to run everything
+- [x] Single docker compose to run everything
 - [ ] Test coverage
 
 ## Contributing to Fanta db
@@ -110,4 +126,4 @@ If you want to contact me you can reach me at daniele.uboldi.job@gmail.com.
 ## License
 <!--- If you're not sure which open license to use see https://choosealicense.com/--->
 
-This project uses the following license: [MIT License]([<link>](https://choosealicense.com/licenses/mit/)).
+This project uses the following license: [MIT License](https://choosealicense.com/licenses/mit/).
