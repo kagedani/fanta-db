@@ -26,6 +26,6 @@ class BaseConfig(object):
             "console_level": "DEBUG"
         }
     }
-    SQLALCHEMY_DATABASE_URI = "postgresql+psycopg2://fanta_db_username:fanta_db_password@localhost/fanta_db"
+    SQLALCHEMY_DATABASE_URI = f"postgresql+psycopg2://fanta_db_username:fanta_db_password@{os.getenv('DB_HOST')}/fanta_db"
     SESSION_MAKER = None
 
