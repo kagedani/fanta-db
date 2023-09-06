@@ -49,6 +49,7 @@ docker compose up -d
 ```
 
 in the `docker-compose/all`. Then you can access the database that keeps running. 
+*N.B.* You need to change the env variables `FANTA_USERNAME` and `FANTA_PSW` in the docker compose file to insert your personal account to access [Fantacalcio Site](www.fantacalcio.it).
 
 ## Using Fanta db
 
