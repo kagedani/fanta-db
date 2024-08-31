@@ -12,6 +12,7 @@ class BaseConfig(object):
     FANTACALCIO_IT_LOGIN_PATH = "/api/v1/User/login"
     FANTACALCIO_IT_DOWNLOAD_PATH = "/api/v1/Excel/stats/{SEASON}/1"
     FANTACALCIO_IT_DOWNLOAD_CONFIG = {
+        "2425": "19",
         "2324": "18",
         "2223": "17",
         "2122": "16",
