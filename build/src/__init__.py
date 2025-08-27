@@ -37,14 +37,14 @@ def set_app_unique_id(config):
 def init_database(configurations):
     logging.info(f"Setting up the database {configurations.SQLALCHEMY_DATABASE_URI}")
     engine = create_engine(configurations.SQLALCHEMY_DATABASE_URI)
-    logging.info(f"Setting up the session maker: started")
+    logging.info("Setting up the session maker: started")
     configurations.SESSION_MAKER = sessionmaker(engine)
-    logging.info(f"Setting up the session maker: done")
+    logging.info("Setting up the session maker: done")
     if not database_exists(engine.url):
         create_database(engine.url)
         logging.info(f"New database created {database_exists(engine.url)}")
     else:
-        logging.info(f"Database already exists")
+        logging.info("Database already exists")
     with engine.connect() as connection:
         with configurations.SESSION_MAKER() as session:
             if engine.dialect.has_table(connection, PlayersStats.__tablename__):
