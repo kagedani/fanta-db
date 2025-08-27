@@ -21,15 +21,16 @@ def send_request(method, url, headers, params, payload):
     except requests.exceptions.HTTPError as errh:
         logging.error(f'HTTPError {response.status_code}, {errh}')
         logging.error(f'Body: {response.text}')
-        response = {'error': response.reason, 'message': response.text}
+        raise
     except requests.exceptions.ConnectionError as errc:
         logging.error(f'ConnectionError: error during the connection to {url}, '
                       f'the timeout is set to {MAX_CONNECT_TIMEOUT}')
-        response = {'error': errc}
+        raise
     except requests.exceptions.RequestException as err:
         logging.error(f'RequestException {err}')
-        response = {'error': err}
-
+        raise
+    if response.status_code != 200 or response.status_code != 201:
+        raise RuntimeError(f"Failed request with status {response.status_code}: {response.reason}")
     return response
 
 
