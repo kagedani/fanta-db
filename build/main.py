@@ -16,6 +16,7 @@ def start_execution(config):
     logging.info(f"Sending request to {login_endpoint} with body {body} and headers {headers}")
 
     login_response = send_request("POST", login_endpoint, headers, None, body)
+    logging.info("🚀 Logged in!")
     login_cookies = login_response.cookies.get_dict()
     cookie_string = ''
     for k in login_cookies:
