@@ -4,18 +4,27 @@ from src.utils.conversion_utils import from_download_to_players_stats
 from src.data.PlayersStats import PlayersStats
 import logging
 import polars as pl
+import json
 
 
 def start_execution(config):
     login_endpoint = f"{config.FANTACALCIO_IT_ENDPOINT}{config.FANTACALCIO_IT_LOGIN_PATH}"
-    body = f"{{username: \"{config.USERNAME}\", password: \"{config.PSW}\"}}"
+    body = json.dumps({
+      "username": f"{config.USERNAME}",
+      "password": f"{config.PSW}"
+    })
     headers = {
         "Content-Type": "application/json"
     }
 
     logging.info(f"Sending request to {login_endpoint} with body {body} and headers {headers}")
-
-    login_response = send_request("POST", login_endpoint, headers, None, body)
+    try:
+        login_response = send_request("POST", login_endpoint, headers, None, body)
+    except Exception:
+        lougout_endpoint = f"{config.FANTACALCIO_IT_ENDPOINT}{config.FANTACALCIO_IT_LOGOUT_PATH}"
+        logout_response = send_request("POST", lougout_endpoint, headers, None, body)
+        logging.info(f"Logout complete for user {config.USERNAME}", extra={"additional_detail": logout_response.status_code})
+        raise
     logging.info("🚀 Logged in!")
     login_cookies = login_response.cookies.get_dict()
     cookie_string = ''
