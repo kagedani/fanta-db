@@ -21,8 +21,8 @@ def start_execution(config):
     try:
         login_response = send_request("POST", login_endpoint, headers, None, body)
     except Exception:
-        lougout_endpoint = f"{config.FANTACALCIO_IT_ENDPOINT}{config.FANTACALCIO_IT_LOGOUT_PATH}"
-        logout_response = send_request("POST", lougout_endpoint, headers, None, body)
+        logout_endpoint = f"{config.FANTACALCIO_IT_ENDPOINT}{config.FANTACALCIO_IT_LOGOUT_PATH}"
+        logout_response = send_request("POST", logout_endpoint, headers, None, body)
         logging.info(f"Logout complete for user {config.USERNAME}", extra={"additional_detail": logout_response.status_code})
         raise
     logging.info("🚀 Logged in!")
