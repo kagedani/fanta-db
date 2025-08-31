@@ -29,8 +29,8 @@ def send_request(method, url, headers, params, payload):
     except requests.exceptions.RequestException as err:
         logging.error(f'RequestException {err}')
         raise
-    if response.status_code != 200 or response.status_code != 201:
-        logging.error(f"Failed request with status {response.status_code}: {response.reason}.", extra={"additional_detail": response.text})
+    if response.status_code != 200 and response.status_code != 201:
+        logging.error(f"Failed request with status {response.status_code}: {response.reason}.", extra={"additional_detail": response.text[:10]})
         raise RuntimeError(f"Failed request with status {response.status_code}: {response.reason}.")
     return response
 

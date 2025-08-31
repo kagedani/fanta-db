@@ -6,10 +6,11 @@ class BaseConfig(object):
     APP_NAME = "fanta-db-23"
     EMPTY_STRING = ""
     APP_EXEC_ID = EMPTY_STRING
-    MAX_CONNECT_TIMEOUT = 30
-    MAX_RESPONSE_TIMEOUT = 30
+    MAX_CONNECT_TIMEOUT = 60
+    MAX_RESPONSE_TIMEOUT = 60
     FANTACALCIO_IT_ENDPOINT = "https://www.fantacalcio.it"
     FANTACALCIO_IT_LOGIN_PATH = "/api/v1/User/login"
+    FANTACALCIO_IT_LOGOUT_PATH = "/api/v1/User/logout"
     FANTACALCIO_IT_DOWNLOAD_PATH = "/api/v1/Excel/stats/{SEASON}/1"
     FANTACALCIO_IT_DOWNLOAD_CONFIG = {
         "2425": "19",
